@@ -47,19 +47,13 @@ $$
 Summation formulas exist for specific powers of natural numbers:
 
 - First power:
-  $
-  \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
-  $
+  $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$
 
 - Second power:
-  $
-  \sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}
-  $
+  $\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}$
 
 - Third power:
-  $
-  \sum_{i=1}^{n} i^3 = \left( \frac{n(n+1)}{2} \right)^2
-  $
+  $\sum_{i=1}^{n} i^3 = \left( \frac{n(n+1)}{2} \right)^2$
 
 ## 7. Applications in Machine Learning
 Summation properties play a key role in:
