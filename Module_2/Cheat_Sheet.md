@@ -10,7 +10,11 @@ This section details various regression models, including their purpose, pros, c
 
 | Model Name | Description | Code Syntax |
 |---|---|---|
-| Simple Linear Regression | **Purpose:** To predict a dependent variable based on one independent variable.<br>**Pros:** Easy to implement, interpret, and efficient for small datasets.<br>**Cons:** Not suitable for complex relationships; prone to underfitting.<br>**Modeling equation:** y = b₀ + b₁x | ```python<br>1 from sklearn.linear_model import LinearRegression<br>2 model = LinearRegression()<br>3 model.fit(X, y)``` |
+| Simple Linear Regression | **Purpose:** To predict a dependent variable based on one independent variable.<br>**Pros:** Easy to implement, interpret, and efficient for small datasets.<br>**Cons:** Not suitable for complex relationships; prone to underfitting.<br>**Modeling equation:** y = b₀ + b₁x | 
+```python
+1 from sklearn.linear_model import LinearRegression
+2 model = LinearRegression()
+3 model.fit(X, y) |
 | Polynomial Regression | **Purpose:** To capture nonlinear relationships between variables.<br>**Pros:** Better at fitting nonlinear data compared to linear regression.<br>**Cons:** Prone to overfitting with high-degree polynomials.<br>**Modeling equation:** y = b₀ + b₁x + b₂x² + ... | ```python<br>1 from sklearn.preprocessing import PolynomialFeatures<br>2 from sklearn.linear_model import LinearRegression<br>3 poly = PolynomialFeatures(degree=2)<br>4 X_poly = poly.fit_transform(X)<br>5 model = LinearRegression().fit(X_poly, y)``` |
 | Multiple Linear Regression | **Purpose:** To predict a dependent variable based on multiple independent variables.<br>**Pros:** Accounts for multiple factors influencing the outcome.<br>**Cons:** Assumes a linear relationship between predictors and target.<br>**Modeling equation:** y = b₀ + b₁x₁ + b₂x₂ + ... | ```python<br>1 from sklearn.linear_model import LinearRegression<br>2 model = LinearRegression()<br>3 model.fit(X, y)``` |
 | Logistic Regression | **Purpose:** To predict probabilities of categorical outcomes.<br>**Pros:** Efficient for binary classification problems.<br>**Cons:** Assumes a linear relationship between independent variables and log-odds.<br>**Modeling equation:** log(p/(1-p)) = b₀ + b₁x₁ + ... | ```python<br>1 from sklearn.linear_model import LogisticRegression<br>2 model = LogisticRegression()<br>3 model.fit(X, y)``` |
