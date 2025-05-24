@@ -8,7 +8,7 @@ Welcome! This interactive cheat sheet provides a quick overview of common regres
 
 This section details various regression models, including their purpose, pros, cons, modeling equations, and Python code syntax using scikit-learn.
 
-| Model Name | Description | Markdown Python Code |
+| Model Name | Description | Code Syntax |
 |---|---|---|
 | Simple Linear Regression | **Purpose:** To predict a dependent variable based on one independent variable.<br>**Pros:** Easy to implement, interpret, and efficient for small datasets.<br>**Cons:** Not suitable for complex relationships; prone to underfitting.<br>**Modeling equation:** y = b₀ + b₁x | ```python<br>1 from sklearn.linear_model import LinearRegression<br>2 model = LinearRegression()<br>3 model.fit(X, y)``` |
 | Polynomial Regression | **Purpose:** To capture nonlinear relationships between variables.<br>**Pros:** Better at fitting nonlinear data compared to linear regression.<br>**Cons:** Prone to overfitting with high-degree polynomials.<br>**Modeling equation:** y = b₀ + b₁x + b₂x² + ... | ```python<br>1 from sklearn.preprocessing import PolynomialFeatures<br>2 from sklearn.linear_model import LinearRegression<br>3 poly = PolynomialFeatures(degree=2)<br>4 X_poly = poly.fit_transform(X)<br>5 model = LinearRegression().fit(X_poly, y)``` |
@@ -21,7 +21,7 @@ This section details various regression models, including their purpose, pros, c
 
 This section lists common scikit-learn functions used in regression tasks, along with their descriptions and Python code syntax.
 
-| Function/Method Name | Brief Description | Markdown Python Code |
+| Function/Method Name | Brief Description | Code Syntax |
 |---|---|---|
 | `train_test_split` | Splits the dataset into training and testing subsets to evaluate the model's performance. | ```python<br>1 from sklearn.model_selection import train_test_split<br>2 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)``` |
 | `StandardScaler` | Standardizes features by removing the mean and scaling to unit variance. | ```python<br>1 from sklearn.preprocessing import StandardScaler<br>2 scaler = StandardScaler()<br>3 X_scaled = scaler.fit_transform(X)``` |
